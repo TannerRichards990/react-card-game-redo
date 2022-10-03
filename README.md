@@ -17,6 +17,15 @@ Use [this template](https://github.com/alchemycodelab/react-half-baked-card-pass
 
 This application allows you to pass cards back and forth between users and a deck. Before starting this lab, take a good look at the different components and try to draw out the component hierarchy. You should have a good idea of what each component is doing and how it is interacting with the shared state. Once you have a good idea of the state, then refactor the application to instead use a GameContext object.
 
+## Component Hierarchy  
+- #1 is Player
+- #2 is Execute-Button
+- #3 is CardList
+- #4 is Card
+
+## WireFrame: (https://whimsical.com/card-game-LnrHHdzb5pjTTKYhts9DXS)
+
+
 ### Rubric
 
 | Task                                                                      | Points |
