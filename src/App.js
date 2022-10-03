@@ -1,12 +1,27 @@
 import './App.css';
-import initialCards from './cards-data';
 import Player from './components/Player';
 import CardList from './components/CardList';
-import { useState } from 'react';
 import ExecutePassButton from './components/ExecutePassButton';
-import { GameProvider } from './context/GameContext';
+import { useGameContext } from './context/GameContext';
 
 function App() {
+  const { deck, selectedCard, playerOneHand, playerTwoHand, playerThreeHand } = useGameContext();
+
+  return (
+    <div className="App">
+      <section>
+        <Player player={1} hand={playerOneHand} />
+        <Player player={2} hand={playerTwoHand} />
+        <Player player={3} hand={playerThreeHand} />
+        <CardList cards={deck} player="deck" />
+      </section>
+      <section>
+        {selectedCard && <ExecutePassButton />}
+      </section>
+    </div>
+  );
+}
+
 
 
 
